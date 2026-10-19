@@ -42,6 +42,41 @@ AI_site/
 └── README.md
 ```
 
+```mermaid
+graph TD
+    ROOT["📁 project-root/"]
+    
+    ROOT --> INDEX["📄 index.html"]
+    ROOT --> ABOUT["📄 about.html"]
+    ROOT --> SERVICES["📄 services.html"]
+    ROOT --> PORTFOLIO["📄 portfolio.html"]
+    ROOT --> CONTACT["📄 contact.html"]
+    ROOT --> README["📄 README.md"]
+    ROOT --> CSS["📁 css/"]
+    ROOT --> JS["📁 js/"]
+    
+    CSS --> STYLE["📄 style.css"]
+    JS --> SCRIPT["📄 script.js"]
+    
+    STYLE -.->|"link rel=stylesheet"| INDEX
+    STYLE -.->|"link rel=stylesheet"| ABOUT
+    STYLE -.->|"link rel=stylesheet"| SERVICES
+    STYLE -.->|"link rel=stylesheet"| PORTFOLIO
+    STYLE -.->|"link rel=stylesheet"| CONTACT
+    
+    SCRIPT -.->|"script src"| INDEX
+    SCRIPT -.->|"script src"| ABOUT
+    SCRIPT -.->|"script src"| SERVICES
+    SCRIPT -.->|"script src"| PORTFOLIO
+    SCRIPT -.->|"script src"| CONTACT
+    
+    style ROOT fill:#1a1a2e,color:#fff
+    style CSS fill:#e94560,color:#fff
+    style JS fill:#16213e,color:#fff
+    style README fill:#888,color:#fff
+```
+
+
 ## 🛠️ Процесс разработки
 
 ### Этап 1: Настройка среды разработки
